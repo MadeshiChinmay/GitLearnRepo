@@ -1,0 +1,170 @@
+PS C:\Users\CHINMAY\desktop\learngitrepo> git branch new_branch
+Switched to branch 'new_branch'
+On branch new_branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   dp1.cpp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\CHINMAY\desktop\learngitrepo> git commit -am "Edited Again in new_branch"
+[new_branch e28be21] Edited Again in new_branch
+ 1 file changed, 1 insertion(+)
+PS C:\Users\CHINMAY\desktop\learngitrepo> git log
+commit e28be2185b2d9ce513055f207977b718492ea757 (HEAD -> new_branch)
+Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 22:07:10 2020 +0530
+
+
+Author: Chinmay <madeshichinmay@gmail.com>
+
+
+commit 9172db04dbf11da4e70b485bca998fc03d667b4e
+Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 21:44:51 2020 +0530
+
+    dp1.cpp file added
+
+commit 480b5c60c9d06d8d1fc10437583ec0b31840d6c7
+Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 21:44:22 2020 +0530
+
+    First Commit
+PS C:\Users\CHINMAY\desktop\learngitrepo> git checkout master
+Switched to branch 'master'
+PS C:\Users\CHINMAY\desktop\learngitrepo> git log
+commit 1dc9d34b4029a6f62ca357cd3a4e69ef8d7b5a33 (HEAD -> master)
+Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 22:00:31 2020 +0530
+
+    Updated dp1.cpp
+
+commit 9172db04dbf11da4e70b485bca998fc03d667b4e
+Author: Chinmay <madeshichinmay@gmail.com>
+
+
+commit 480b5c60c9d06d8d1fc10437583ec0b31840d6c7
+Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 21:44:22 2020 +0530
+    First Commit
+PS C:\Users\CHINMAY\desktop\learngitrepo> git merge master
+Already up to date.
+PS C:\Users\CHINMAY\desktop\learngitrepo> git checkout new_branch
+Switched to branch 'new_branch'
+PS C:\Users\CHINMAY\desktop\learngitrepo> git merge master
+Already up to date.
+PS C:\Users\CHINMAY\desktop\learngitrepo> git log
+commit e28be2185b2d9ce513055f207977b718492ea757 (HEAD -> new_branch)
+Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 22:07:10 2020 +0530
+
+    Edited Again in new_branch
+
+commit 1dc9d34b4029a6f62ca357cd3a4e69ef8d7b5a33 (master)
+Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 22:00:31 2020 +0530
+
+    Updated dp1.cpp
+
+commit 9172db04dbf11da4e70b485bca998fc03d667b4e
+Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 21:44:51 2020 +0530
+    dp1.cpp file added
+
+commit 480b5c60c9d06d8d1fc10437583ec0b31840d6c7
+
+    First Commit
+Switched to branch 'master'
+PS C:\Users\CHINMAY\desktop\learngitrepo> git merge new_branch
+Updating 1dc9d34..e28be21
+Fast-forward
+ dp1.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+PS C:\Users\CHINMAY\desktop\learngitrepo> git log
+commit e28be2185b2d9ce513055f207977b718492ea757 (HEAD -> master, new_branch)Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 22:07:10 2020 +0530
+
+    Edited Again in new_branch
+
+Date:   Mon Dec 14 22:00:31 2020 +0530
+
+commit 9172db04dbf11da4e70b485bca998fc03d667b4e
+Date:   Mon Dec 14 21:44:51 2020 +0530
+
+    dp1.cpp file added
+
+commit 480b5c60c9d06d8d1fc10437583ec0b31840d6c7
+Author: Chinmay <madeshichinmay@gmail.com>
+Date:   Mon Dec 14 21:44:22 2020 +0530
+
+    First Commit
+PS C:\Users\CHINMAY\desktop\learngitrepo> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\CHINMAY\desktop\learngitrepo> git remote add origin https://github.com/MadeshiChinmay/GitLearnRepo.git
+PS C:\Users\CHINMAY\desktop\learngitrepo> git remote -v
+origin  https://github.com/MadeshiChinmay/GitLearnRepo.git (fetch)
+origin  https://github.com/MadeshiChinmay/GitLearnRepo.git (push)
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': madeshichinmay@gmail.com
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (12/12), 1.74 KiB | 593.00 KiB/s, done.
+Total 12 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/MadeshiChinmay/GitLearnRepo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+PS C:\Users\CHINMAY\desktop\learngitrepo> git checkout new_branch
+Switched to branch 'new_branch'
+PS C:\Users\CHINMAY\desktop\learngitrepo> git commit -am "New Change in new_branch"
+[new_branch 4e3a45f] New Change in new_branch
+ 1 file changed, 1 insertion(+)
+PS C:\Users\CHINMAY\desktop\learngitrepo> git push origin new_branch
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': madeshichinmay@gmail.com
+Password for 'https://madeshichinmay@gmail.com@github.com':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'new_branch' on GitHub by visiting:
+remote:      https://github.com/MadeshiChinmay/GitLearnRepo/pull/new/new_branch
+remote:
+To https://github.com/MadeshiChinmay/GitLearnRepo.git
+ * [new branch]      new_branch -> new_branch
+PS C:\Users\CHINMAY\desktop\learngitrepo> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\CHINMAY\desktop\learngitrepo> git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/MadeshiChinmay/GitLearnRepo
+   e28be21..69c2777  master     -> origin/master
+Updating e28be21..69c2777
+Fast-forward
+ dp1.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+PS C:\Users\CHINMAY\desktop\learngitrepo> git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/MadeshiChinmay/GitLearnRepo
+   69c2777..55f9378  master     -> origin/master
+Updating 69c2777..55f9378
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+PS C:\Users\CHINMAY\desktop\learngitrepo>
